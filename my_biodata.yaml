@@ -1,0 +1,112 @@
+# ======================================
+# 1) RECOMMENDED: "sections" MODE (ordered)
+#    Add any headings and fields you like. The order you write is the order shown.
+# ======================================
+sections:
+  BASIC DETAILS:
+    Name: Thanos Kumar Goswami
+    Date of Birth: 14/03/2050
+    Time of Birth: 04:20 AM
+    Place of Birth: Nagpur, MH, IND
+    # Rashi: Meen
+    # Nakshatra: Uttara Phalguni
+    # Hometown: Milky Way Galaxy
+    Religion: Unknown
+    Caste: Milky-No-Way
+    # Gotra: True Gemini
+    # Weight: 978 KG
+    Height: 7 ft.
+    Blood Group: O+
+    Complexion: of rather purple complexion
+    Education: Can do magic tricks
+    Occupation: No need
+    Income: 666999666999 LPA
+
+  FAMILY DETAILS:
+    Father Name: Chinnaswami Venugopal Aiyer
+    Father Occupation: Retired Galaxy Officer
+    Mother Name: Unknown
+    Mother Occupation: Unknown
+    Sister: Unknown
+    Uncle: Unknown
+    Uncle Hometown: Unknown
+    Uncle Contact: 6366666666
+
+  CONTACT DETAILS:
+    Address: Nowhere land, Milky Way Galaxy
+    Contact No.: +91 6366666666
+
+# 👉 To add anything new, just drop it under the section you want:
+#   e.g.,
+#   BASIC DETAILS:
+#     Hobbies: Photography, trekking
+# No code changes needed.
+
+# ======================================
+# 2) If you remove the whole "sections:" block above,
+#    the script will render ALL NON-STYLE KEYS as a single section called "DETAILS".
+#    That includes any new fields you add at top-level (except Border/Font/Ganesha/Photo keys).
+# ======================================
+
+# --------------- IMAGES ---------------
+# ==========================================
+#  GANESHA EMBLEM CONTROL (top small emblem)
+# ==========================================
+# GaneshaMode controls what appears above the main title:
+#   - om    : ALWAYS draw the "ॐ" symbol (requires a Devanagari font)
+#   - image : ALWAYS use GaneshaImage PNG (if it loads)
+#   - auto  : Use PNG if available; otherwise fallback to "ॐ"
+Photo: my_photo.jpg          # Optional; if omitted, photo box stays empty
+GaneshaMode: auto            # 'image' -> always PNG; 'om' -> always draw "ॐ"; 'auto' -> PNG if available else "ॐ"
+GaneshaImage: ganesha.png    # Used when GaneshaMode is 'image' or 'auto' and file loads
+
+
+# =================
+#  BORDER STRIPS
+# =================
+# Put your decorative strip image(s) here.
+# BorderMode:
+#   - fit     : SCALE to full page width (no left/right cropping). Height auto-computed.
+#   - stretch : Stretch to width & set height (distorts aspect). Uses BorderHeight.
+#   - tile    : Scale to BorderHeight and tile across the width. Uses BorderHeight.# --- Borders (use your strip image full-width, no cropping) ---
+BorderTop: my_border.png         # your strip image
+# BorderBottom: my_bottom.png    # optional; if omitted, Top is reused
+BorderMode: tile                  # IMPORTANT: scales to full page width, preserves aspect
+BorderHeight: 32               # ignored in 'fit' mode
+BorderFlipBottom: false          # keep same orientation at the bottom
+
+
+# =============================
+#  TEXT SIZES (no code changes)
+# =============================
+# Increase/decrease these to make text bigger/smaller.
+# If the sizes don't change in output, specify valid .ttf files in the font section below.
+HeadingSize: 20        # "|| SHREE GANESHAYA NAMAH ||"
+SubheadingSize: 18     # "BIODATA"
+LabelSize: 14          # "Name :", "Date of Birth :", etc.
+SectionSize: 12        # "FAMILY DETAILS", "CONTACT DETAILS"
+OmSize: 84             # Size of "ॐ" if drawn
+
+# ===================================
+#  FONT FILES (IMPORTANT for scaling)
+# ===================================
+# If these are missing, Pillow may fall back to a built-in bitmap font and
+# your text sizes WON'T change (you'll also see WARN lines in the console).
+# Provide real TTF paths. You can:
+#   A) Place .ttf files in the project folder and reference them like "./DejaVuSans.ttf"
+#   B) Point to installed system fonts (examples for Windows below)
+#
+# Windows examples:
+FontRegular: "C:/Windows/Fonts/arial.ttf"
+FontBold:    "C:/Windows/Fonts/arialbd.ttf"
+FontDevanagari: "C:/Windows/Fonts/nirmala.ttf"
+
+# Or drop TTFs alongside the script and reference them directly:
+# FontRegular: "./DejaVuSans.ttf"
+# FontBold: "./DejaVuSans-Bold.ttf"
+# FontDevanagari: "./NotoSansDevanagari-Regular.ttf"
+
+# Uncomment and set the following three lines to reliable .ttf files on your machine:
+# FontRegular: "./DejaVuSans.ttf"
+# FontBold: "./DejaVuSans-Bold.ttf"
+# FontDevanagari: "./NotoSansDevanagari-Regular.ttf"
