@@ -386,7 +386,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="Generate a decorative biodata card from a YAML file.")
     ap.add_argument("--content", required=True, help="Path to YAML (e.g., my_biodata.yaml).")
     ap.add_argument("--output", default="my_biodata.png", help="Output image filename.")
-    ap.add_argument("--size", default="900x1275", help="WIDTHxHEIGHT (e.g., 794x1123, 1240x1754, 2480x3508).")
+    ap.add_argument("--size", default="2480x3508", help="WIDTHxHEIGHT (e.g., 794x1123, 1240x1754, 2480x3508).")
     args = ap.parse_args()
 
     try:
